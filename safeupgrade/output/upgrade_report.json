@@ -1,0 +1,10 @@
+{
+  "upgraded_at": "2025-12-12T19:50:04.652Z",
+  "dependencies": [
+    {
+      "name": "lodash",
+      "latest": "4.17.21",
+      "outdated": true
+    }
+  ]
+}
