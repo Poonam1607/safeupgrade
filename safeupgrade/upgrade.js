@@ -1,6 +1,10 @@
 const fs = require("fs");
 const { execSync } = require("child_process");
 
+if (fs.existsSync("/output/upgrade_report.json")) {
+  fs.unlinkSync("/output/upgrade_report.json");
+}
+
 // Paths
 const scanReportPath = "/output/scan_report.json";
 const packageJsonPath = "/app/package.json";
