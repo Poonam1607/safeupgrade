@@ -24,7 +24,6 @@ const report = {
   }))
 };
 
-fs.mkdirSync("/output", { recursive: true });
 fs.writeFileSync("/output/scan_report.json", JSON.stringify(report, null, 2));
 
 console.log("Scan completed. Report written to scan_report.json");

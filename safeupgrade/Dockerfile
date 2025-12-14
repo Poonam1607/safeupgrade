@@ -3,8 +3,11 @@ FROM node:18-bookworm
 WORKDIR /app
 
 COPY scan.js .
-COPY upgrade.js .
-COPY test.js .
+COPY agent_decide.js .
 COPY final_report.js .
+COPY rules.json .
+COPY package.json .
 
-CMD ["sh", "-c", "node scan.js && node upgrade.js"]
+RUN mkdir /output
+
+CMD ["sh", "-c", "node scan.js && node agent_decide.js && node final_report.js"]
