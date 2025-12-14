@@ -18,11 +18,11 @@ const finalReport = {
   run_at: new Date().toISOString(),
   summary: {
     dependencies_scanned: scanReport.dependencies.length,
-    dependencies_upgraded: upgradeReport.dependencies.length,
+    dependencies_upgraded: upgradeReport.upgraded.length,
     status: testsPassed ? "SAFE" : "UNSAFE"
   },
   details: {
-    upgraded_dependencies: upgradeReport.dependencies,
+    upgraded_dependencies: upgradeReport.upgraded,
     tests_passed: testsPassed
   }
 };
